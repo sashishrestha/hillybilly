@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /de/anfrage-gesendet
+Disallow: /en/request-sent
+Sitemap: https://www.hillybillyfoods.de/sitemap.xml

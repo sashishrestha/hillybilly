@@ -1,0 +1,209 @@
+/* Fonts are self-hosted (no Google Fonts CDN calls) — keeps the site GDPR-clean. */
+@import '@fontsource-variable/bricolage-grotesque/wdth.css';
+@import '@fontsource/caveat-brush/400.css';
+@import 'tailwindcss';
+
+@theme {
+  /* Brand palette — from the "wow-effect" concept brief */
+  --color-ink: #0a1122; /* dark page background */
+  --color-alt: #101b33; /* alternate section background (navy in dark, sand in light) */
+  --color-navy: #101b33;
+  --color-navy-2: #1a2747;
+  --color-navy-3: #26345a;
+  --color-pink: #f72585;
+  --color-pink-ink: #c8106a; /* pink for text on cream: 5.3:1 */
+  --color-mango: #ffbe0b;
+  --color-cream: #fff7ec;
+  --color-cream-2: #fbead3;
+  --color-teal: #16bfa8;
+  --color-teal-ink: #0e7c6d;
+  --color-mute: #5b6478; /* body copy on cream: 5.6:1 */
+  --color-mist: #b8bfd0; /* body copy on navy: 9.3:1 */
+
+  --font-sans: 'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-brush: 'Caveat Brush', 'Comic Sans MS', cursive;
+
+  --radius-card: 1.25rem;
+  --radius-pill: 999px;
+
+  /* Motion tokens */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --animate-page-in: page-in 320ms var(--ease-out-expo) both;
+  --animate-fade-up: fade-up 450ms var(--ease-out-expo) both;
+  --animate-fade-in: fade-in 250ms ease-out both;
+  --animate-shake: shake 360ms ease-in-out both;
+  --animate-pop: pop 420ms var(--ease-spring) both;
+  --animate-flip: flip 450ms var(--ease-spring) both;
+  --animate-wobble: wobble 5s ease-in-out infinite;
+
+  @keyframes page-in {
+    from { opacity: 0.001; transform: translateY(10px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes flip {
+    from { transform: perspective(160px) rotateY(-100deg) scale(0.6); opacity: 0; }
+    to { transform: none; opacity: 1; }
+  }
+  @keyframes wobble {
+    0%, 100% { transform: rotate(-4deg) translateY(0); }
+    50% { transform: rotate(3deg) translateY(-10px); }
+  }
+  @keyframes draw {
+    to { stroke-dashoffset: 0; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-6px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-3px); }
+    80% { transform: translateX(2px); }
+  }
+  @keyframes pop {
+    from { opacity: 0; transform: scale(0.85); }
+    to { opacity: 1; transform: none; }
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-ink text-cream font-sans antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    font-optical-sizing: auto;
+  }
+  h1, h2, h3, .display {
+    font-stretch: 75%;
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  p { text-wrap: pretty; }
+  /* Two-tone ring (mango inside, navy outside): visible on navy AND on cream/white.
+     Border radius is left alone so pills and circles keep their shape. */
+  :focus-visible {
+    outline: 3px solid var(--color-mango);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--color-navy);
+  }
+  button, a, [role='button'] { -webkit-tap-highlight-color: transparent; }
+  ::selection { background: var(--color-mango); color: var(--color-navy); }
+}
+
+@utility container-x {
+  width: 100%;
+  max-width: 78rem;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+/* Hand-painted brush tape — the brand's "sticker" device. Used sparingly. */
+@utility tape {
+  font-family: var(--font-brush);
+  display: inline-block;
+  background: var(--color-mango);
+  color: var(--color-navy);
+  padding: 0.15em 0.6em 0.1em;
+  line-height: 1.1;
+  clip-path: polygon(1% 8%, 6% 0, 50% 6%, 96% 0, 100% 14%, 98% 92%, 93% 100%, 48% 94%, 4% 100%, 0 84%);
+}
+
+/* Scroll reveal: pure CSS so prerendered HTML is never hidden (no JS, no hydration mismatch).
+   Browsers without scroll-driven animations simply show the content. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal,
+    .reveal-group > * {
+      animation: fade-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+    /* Stagger siblings by shifting their range */
+    .reveal-group > :nth-child(4n + 2) { animation-range: entry 6% entry 46%; }
+    .reveal-group > :nth-child(4n + 3) { animation-range: entry 12% entry 52%; }
+    .reveal-group > :nth-child(4n + 4) { animation-range: entry 18% entry 58%; }
+  }
+}
+
+/* Image placeholder + soft fade so photos don't pop in */
+img.img-fade { background-color: color-mix(in srgb, var(--color-navy) 8%, transparent); }
+
+/* Hover-only affordances shouldn't "stick" on touch screens */
+@media (hover: none) {
+  .no-touch-hover { transform: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Light theme ----------
+   Dark is the default. Light flips the page-level tokens; areas that are dark by design
+   (header, footer, heroes, drawer) carry `.theme-dark` to restore the dark values. */
+html[data-theme='light'] {
+  color-scheme: light;
+  --color-ink: #fff7ec;
+  --color-alt: #fbead3;
+  --color-cream: #101b33;
+  --color-navy-2: #ffffff;
+  --color-navy-3: #fff7ec;
+  --color-mist: #5b6478;
+  --color-pink: #c8106a;
+  --color-teal: #0e7c6d;
+}
+html[data-theme='light'] .theme-dark {
+  color-scheme: dark;
+  --color-ink: #0a1122;
+  --color-alt: #101b33;
+  --color-cream: #fff7ec;
+  --color-navy-2: #1a2747;
+  --color-navy-3: #26345a;
+  --color-mist: #b8bfd0;
+  --color-pink: #f72585;
+  --color-teal: #16bfa8;
+}
+html[data-theme='light'] body { box-shadow: none; }
+/* Smooth cross-fade when the user flips the theme */
+html.theme-switching *, html.theme-switching *::before, html.theme-switching *::after {
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease, box-shadow 300ms ease !important;
+}
+/* Type scale: page titles and section titles (kept modest; the hero sets the tone) */
+@utility text-display-1 {
+  font-size: clamp(2.5rem, 5.6vw, 4.6rem);
+  line-height: 1;
+}
+@utility text-display-2 {
+  font-size: clamp(2.4rem, 5.4vw, 4.25rem);
+  line-height: 1;
+}
+/* Faint comic-print dots (a nod to the cartoon logo) */
+@utility halftone {
+  background-image: radial-gradient(currentColor 1.2px, transparent 1.4px);
+  background-size: 18px 18px;
+}
+/* Big section titles (SectionHead): Catering for every occasion, Real events, How it works ... */
+@utility text-display-3 {
+  font-size: clamp(2.75rem, 6.6vw, 5.5rem);
+  line-height: 0.98;
+}
