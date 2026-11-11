@@ -117,7 +117,9 @@ export function CateringForm() {
 
   useEffect(() => {
     try {
-      const { privacy: _p, website: _w, ...keep } = form;
+      const keep: Partial<FormState> = { ...form };
+      delete keep.privacy;
+      delete keep.website;
       sessionStorage.setItem(DRAFT_KEY, JSON.stringify(keep));
     } catch {
       /* storage unavailable — the form still works */
