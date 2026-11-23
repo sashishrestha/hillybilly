@@ -32,7 +32,7 @@ export default function ConceptDetail() {
         route="concept"
         params={{ slug: c.slug }}
         title={`${c.name} – ${t(c.cuisine)} ${t({ de: 'Catering', en: 'catering' })}`}
-        description={`${t(c.tagline)}. ${t(c.pitch).slice(0, 110)}…`}
+        description={`${t(c.tagline)}. ${t(c.pitch).split('\n\n')[0].slice(0, 110)}…`}
         image={c.image ? media[c.image].src : undefined}
         jsonLd={[
           conceptJsonLd(c, lang),
@@ -61,7 +61,9 @@ export default function ConceptDetail() {
             </p>
             <h1 className="mt-5 text-display-1">{c.name}</h1>
             <p className="mt-4 text-2xl font-semibold text-cream">{t(c.tagline)}</p>
-            <p className="mt-5 max-w-[58ch] text-lg text-mist">{t(c.pitch)}</p>
+            {t(c.pitch).split('\n\n').map((para) => (
+              <p key={para} className="mt-5 max-w-[58ch] text-lg text-mist">{para}</p>
+            ))}
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <AnimateIcon animateOnHover asChild>
                 <Button asChild variant="onDark" size="lg">
@@ -105,7 +107,7 @@ export default function ConceptDetail() {
         <div className="container-x grid gap-12 lg:grid-cols-[1.5fr_1fr]">
           <div>
             <p className="tape mb-4 -rotate-2 text-xl">{t({ de: 'Speisekarte', en: 'The menu' })}</p>
-            <h2 id="menu-heading" className="text-display-2">{t({ de: 'Menü-Highlights', en: 'Menu highlights' })}</h2>
+            <h2 id="menu-heading" className="text-display-2">{t(c.menuHeading ?? { de: 'Menü-Highlights', en: 'Menu highlights' })}</h2>
             <Scribble className="mt-3" />
             {c.status === 'new' && (
               <p className="mt-4 flex gap-2 rounded-2xl bg-mango/20 p-4 text-cream">
@@ -155,6 +157,20 @@ export default function ConceptDetail() {
         </div>
       </section>
 
+      {c.story && (
+        <section aria-labelledby="story-heading" className="theme-dark relative overflow-hidden bg-navy py-16 text-cream md:py-24">
+          <Halftone />
+          <div className="container-x relative max-w-4xl">
+            <h2 id="story-heading" className="text-display-2">{t(c.story.heading)}</h2>
+            <Scribble className="mt-3" />
+            <p className="mt-5 font-brush text-3xl text-mango">{t(c.story.tagline)}</p>
+            <div className="mt-6 space-y-4 text-lg text-mist">
+              {c.story.paragraphs.map((para) => <p key={para.en}>{t(para)}</p>)}
+            </div>
+            <p className="mt-8 text-2xl font-bold">{t(c.story.closing)}</p>
+          </div>
+        </section>
+      )}
       {c.gallery.length > 0 && (
         <section aria-labelledby="gallery-heading" className="pb-16 md:pb-24">
           <div className="container-x">

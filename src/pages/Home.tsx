@@ -107,8 +107,8 @@ function Hero() {
 
           <p className="animate-fade-up mt-7 max-w-[50ch] text-base text-mist md:text-lg" style={delay(2)}>
             {t({
-              de: 'Von Korean Corndogs und Himalaya-Momos bis zu indischen Currys, amerikanischen Klassikern und süßen Desserts. Viele Foodkonzepte, ein erfahrener Catering-Partner.',
-              en: 'From Korean corndogs and Himalayan momos to Indian curries, American classics and sweet desserts. Many food concepts, one experienced catering partner.',
+              de: 'Von Corndogs und Himalaya-Momos bis zu indischen Currys, amerikanischen Klassikern und süßen Desserts. Viele Foodkonzepte, ein erfahrener Catering-Partner.',
+              en: 'From Corndogs and Himalayan momos to Indian curries, American classics and sweet desserts. Many food concepts, one experienced catering partner.',
             })}
           </p>
 
@@ -174,14 +174,30 @@ function WhyUs() {
   return (
     <section aria-labelledby="why-heading" className="py-20 md:py-28">
       <div className="container-x grid items-center gap-12 lg:grid-cols-2">
-        <figure className="reveal relative -rotate-1 transition-transform duration-500 hover:rotate-0">
-          <div className="overflow-hidden rounded-[var(--radius-card)] border-[6px] border-[#fff7ec] shadow-[8px_8px_0_0_rgba(247,37,133,0.9)]">
-            <Img k="corndogsTeamFour" className="aspect-[16/10]" />
+        <div className="reveal space-y-6">
+          <figure className="relative -rotate-1 transition-transform duration-500 hover:rotate-0">
+            <div className="overflow-hidden rounded-[var(--radius-card)] border-[6px] border-[#fff7ec] shadow-[8px_8px_0_0_rgba(247,37,133,0.9)]">
+              <Img k="corndogsTeamFour" className="aspect-[16/10]" />
+            </div>
+            <figcaption className="tape absolute -bottom-4 right-6 rotate-2 text-xl">
+              {t({ de: 'Gutes Essen bringt Menschen zusammen', en: 'Good food brings people together' })}
+            </figcaption>
+          </figure>
+          <div className="grid grid-cols-2 gap-4 pt-2">
+            <figure className="rotate-1 transition-transform duration-500 hover:rotate-0">
+              <div className="overflow-hidden rounded-[var(--radius-card)] border-[6px] border-[#fff7ec] shadow-[6px_6px_0_0_rgba(255,190,11,0.9)]">
+                <Img k="momolayaTrailer" className="aspect-[4/3]" />
+              </div>
+              <figcaption className="mt-3 font-brush text-xl text-mango">Momolaya</figcaption>
+            </figure>
+            <figure className="-rotate-1 transition-transform duration-500 hover:rotate-0">
+              <div className="overflow-hidden rounded-[var(--radius-card)] border-[6px] border-[#fff7ec] shadow-[6px_6px_0_0_rgba(22,191,168,0.9)]">
+                <Img k="curryTeamCart" className="aspect-[4/3]" />
+              </div>
+              <figcaption className="mt-3 font-brush text-xl text-mango">Curry on Wheels</figcaption>
+            </figure>
           </div>
-          <figcaption className="tape absolute -bottom-4 right-6 rotate-2 text-xl">
-            {t({ de: 'Gutes Essen bringt Menschen zusammen', en: 'Good food brings people together' })}
-          </figcaption>
-        </figure>
+        </div>
         <div>
           <p className="tape mb-4 -rotate-2 text-xl">{t({ de: 'Warum wir', en: 'Why us' })}</p>
           <h2 id="why-heading" className="text-display-2">
@@ -205,7 +221,7 @@ function WhyUs() {
 function RealEvents() {
   const lang = useLang();
   const t = useT();
-  const shots: MediaKey[] = ['corndogsTeamTruck', 'momolayaChef', 'curryTeam', 'waffleSticksCounter', 'momolayaTrailer'];
+  const shots: MediaKey[] = ['corndogsTeamTruck', 'momolayaChef', 'curryTeam', 'waffleSticksCounter', 'momolayaTrailer', 'curryTeamCart'];
   return (
     <section aria-labelledby="real-heading" className="theme-dark bg-navy py-20 text-cream md:py-28">
       <div className="container-x">
@@ -224,13 +240,13 @@ function RealEvents() {
             </Button>
           }
         />
-        <ul className="reveal-group grid auto-rows-[11rem] grid-cols-2 gap-3 md:auto-rows-[14rem] md:grid-cols-4">
+        <ul className="reveal-group grid auto-rows-[11rem] grid-flow-dense grid-cols-2 gap-3 md:auto-rows-[14rem] md:grid-cols-4">
           {shots.map((k, i) => (
             <li
               key={k}
               className={
                 'group overflow-hidden rounded-[var(--radius-card)] transition-transform duration-300 ease-[var(--ease-spring)] hover:z-10 hover:rotate-0 hover:scale-[1.03] md:even:rotate-1 md:odd:-rotate-1 ' +
-                (i === 0 ? 'col-span-2 row-span-2' : i === 2 ? 'col-span-2' : '')
+                (i === 0 ? 'col-span-2 row-span-2' : i === 2 || i >= 4 ? 'col-span-2' : '')
               }
             >
               <Img k={k} className="transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-105" />
@@ -255,8 +271,8 @@ export default function Home() {
           en: 'HillyBilly Foods – Street Food Catering & Food Trucks for Events',
         })}
         description={t({
-          de: 'Foodtruck Catering für Firmenfeiern, Hochzeiten, Festivals und private Feiern: Korean Corndogs, Momos, Currys, Waffeln und mehr — frisch vor Ort. Jetzt Angebot anfragen.',
-          en: 'Food truck catering for corporate events, weddings, festivals and private parties: Korean corndogs, momos, curries, waffles and more — cooked fresh on site. Request a quote.',
+          de: 'Foodtruck Catering für Firmenfeiern, Hochzeiten, Festivals und private Feiern: Corndogs, Momos, Currys, Waffeln und mehr — frisch vor Ort. Jetzt Angebot anfragen.',
+          en: 'Food truck catering for corporate events, weddings, festivals and private parties: Corndogs, momos, curries, waffles and more — cooked fresh on site. Request a quote.',
         })}
         image={media.corndogsTeamTruck.src}
         jsonLd={[organizationJsonLd(lang), faqJsonLd(lang)]}

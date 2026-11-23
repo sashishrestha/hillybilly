@@ -1,0 +1,1 @@
+ param($s) $s.Replace("gallery: ['momolayaChef', 'momoTwoPlates', 'momolayaTrailer']","gallery: ['momolayaChef', 'momoPlate', 'momoBeef', 'momoVeg', 'momoTwoPlates', 'momolayaTrailer']") 

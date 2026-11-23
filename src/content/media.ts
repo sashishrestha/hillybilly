@@ -13,10 +13,23 @@ import momolayaTrailer from '@/assets/img/momolaya-trailer.webp';
 import momoBoat from '@/assets/img/momo-boat.webp';
 import momolayaChef from '@/assets/img/momolaya-chef.webp';
 import momoTwoPlates from '@/assets/img/momo-two-plates.webp';
-import curryTeam from '@/assets/img/curry-on-wheels-team.webp';
+import curryTeam from '@/assets/img/curry-on-wheels-team.jpeg';
 import mangoLassi from '@/assets/img/mango-lassi.webp';
-import chaatBowl from '@/assets/img/chaat-bowl.webp';
+import chaatBowl from '@/assets/img/chaat-bowl.jpeg';
 
+
+import corndogBox from '@/assets/img/corndog.jpeg';
+import burger from '@/assets/img/burger.jpeg';
+import hotdog from '@/assets/img/hotdog.jpeg';
+import macCheese from '@/assets/img/mac & cheese.jpeg';
+import koreanBowls from '@/assets/img/40.jpeg';
+import curryChaatSign from '@/assets/img/curry-1.jpeg';
+import curryTeamSelfie from '@/assets/img/curry-on-wheels-team-1.jpeg';
+import curryTeamKitchen from '@/assets/img/curry-on-wheels-team-2.jpeg';
+import momoPlate from '@/assets/img/momo.jpeg';
+import momoBeef from '@/assets/img/rindfleish-momo.jpg';
+import momoVeg from '@/assets/img/vegan-momo.jpg';
+import curryTeamCart from '@/assets/img/curry-on-wheels-team-cart.jpeg';
 export type Media = { src: string; alt: L; w: number; h: number };
 
 /**
@@ -88,6 +101,54 @@ export const media = {
   chaatBowl: {
     src: chaatBowl, w: 960, h: 1280,
     alt: { de: 'Kichererbsen-Chaat mit Joghurt, Koriander und Sev vor dem Curry-on-Wheels-Schriftzug', en: 'Chickpea chaat with yoghurt, coriander and sev in front of the Curry on Wheels sign' },
+  },
+  corndogBox: {
+    src: corndogBox, w: 1086, h: 1448,
+    alt: { de: 'Corndog mit Ketchup und Senf in der pinken HillyBilly-Corndogs-Box', en: 'Corndog with ketchup and mustard in the pink HillyBilly Corndogs box' },
+  },
+  burger: {
+    src: burger, w: 1254, h: 1254,
+    alt: { de: 'Saftiger Cheeseburger mit karamellisierten Zwiebeln in der pinken HillyBilly-Foods-Box', en: 'Juicy cheeseburger with caramelised onions in the pink HillyBilly Foods box' },
+  },
+  hotdog: {
+    src: hotdog, w: 1254, h: 1254,
+    alt: { de: 'Hotdog mit Käsesauce, Röstzwiebeln und Jalapeños im pinken Karo-Papier', en: 'Hot dog with cheese sauce, crispy onions and jalapeños on pink checkered paper' },
+  },
+  macCheese: {
+    src: macCheese, w: 1199, h: 1312,
+    alt: { de: 'Zwei pinke Mac-&-Cheese-Becher, einer mit Nachos und einer mit gebratenen Pilzen', en: 'Two pink mac & cheese cups, one topped with nachos and one with roasted mushrooms' },
+  },
+  koreanBowls: {
+    src: koreanBowls, w: 1536, h: 1024,
+    alt: { de: 'Korean Fried Chicken Bowl mit Reis und Edamame neben einer Portion Korean Fried Chicken', en: 'Korean fried chicken bowl with rice and edamame next to a portion of Korean fried chicken' },
+  },
+  curryChaatSign: {
+    src: curryChaatSign, w: 1448, h: 1086,
+    alt: { de: 'Kichererbsen-Chaat in der Schale vor dem Curry-on-Wheels-Schild', en: 'Chickpea chaat in a bowl in front of the Curry on Wheels sign' },
+  },
+  curryTeamSelfie: {
+    src: curryTeamSelfie, w: 1599, h: 1200,
+    alt: { de: 'Zwei lachende Mitarbeiterinnen von Curry on Wheels in blauen Shirts am Verkaufsstand', en: 'Two smiling Curry on Wheels team members in blue shirts at the stand' },
+  },
+  curryTeamKitchen: {
+    src: curryTeamKitchen, w: 1016, h: 771,
+    alt: { de: 'Lächelnde Mitarbeiterin von Curry on Wheels in der Foodtruck-Küche neben den Reiskochern', en: 'Smiling Curry on Wheels team member in the food truck kitchen next to the rice cookers' },
+  },
+  momoPlate: {
+    src: momoPlate, w: 1254, h: 1254,
+    alt: { de: 'Teller mit gedämpften Momos, Sesam und zwei Chutneys vor einer Momos-Tafel', en: 'Plate of steamed momos with sesame and two chutneys in front of a momos chalkboard' },
+  },
+  momoBeef: {
+    src: momoBeef, w: 1079, h: 717,
+    alt: { de: 'Gedämpfte Rindfleisch-Momos mit Chutney und Holzgabel', en: 'Steamed beef momos with chutney and a wooden fork' },
+  },
+  momoVeg: {
+    src: momoVeg, w: 1136, h: 701,
+    alt: { de: 'Gedämpfte vegetarische Momos mit Chili-Chutney und Holzgabel', en: 'Steamed vegetable momos with chilli chutney and a wooden fork' },
+  },
+  curryTeamCart: {
+    src: curryTeamCart, w: 1480, h: 666,
+    alt: { de: 'Türkiser Curry-on-Wheels-Verkaufsanhänger mit Speisekarten-Postern und zwei Teammitgliedern', en: 'Turquoise Curry on Wheels trailer with menu posters and two team members' },
   },
 } satisfies Record<string, Media>;
 

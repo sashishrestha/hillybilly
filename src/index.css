@@ -10,8 +10,8 @@
   --color-navy: #101b33;
   --color-navy-2: #1a2747;
   --color-navy-3: #26345a;
-  --color-pink: #f72585;
-  --color-pink-ink: #c8106a; /* pink for text on cream: 5.3:1 */
+  --color-pink: #00D9C6;
+  --color-pink-ink: #007d72; /* turquoise for text on cream */
   --color-mango: #ffbe0b;
   --color-cream: #fff7ec;
   --color-cream-2: #fbead3;
@@ -169,7 +169,7 @@ html[data-theme='light'] {
   --color-navy-2: #ffffff;
   --color-navy-3: #fff7ec;
   --color-mist: #5b6478;
-  --color-pink: #c8106a;
+  --color-pink: #007d72;
   --color-teal: #0e7c6d;
 }
 html[data-theme='light'] .theme-dark {
@@ -180,7 +180,7 @@ html[data-theme='light'] .theme-dark {
   --color-navy-2: #1a2747;
   --color-navy-3: #26345a;
   --color-mist: #b8bfd0;
-  --color-pink: #f72585;
+  --color-pink: #00D9C6;
   --color-teal: #16bfa8;
 }
 html[data-theme='light'] body { box-shadow: none; }

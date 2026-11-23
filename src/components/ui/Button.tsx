@@ -2,9 +2,9 @@ import { Button as MotionButton, type ButtonProps as MotionButtonProps } from '@
 import { cn } from '@/lib/cn';
 
 const variants = {
-  /** Pink gradient with white text: both stops are deep enough for 4.5:1+ contrast (plain brand pink gives only 3.8:1) */
-  primary: 'bg-gradient-to-br from-[#e11a7e] to-[#b80f62] text-white hover:from-[#f0278c] hover:to-[#c8106a] shadow-[0_6px_0_0_#6e0a3a] hover:shadow-[0_4px_0_0_#6e0a3a] hover:translate-y-[2px]',
-  onDark: 'bg-gradient-to-br from-[#e11a7e] to-[#b80f62] text-white hover:from-[#f0278c] hover:to-[#c8106a] shadow-[0_6px_0_0_#000000] hover:shadow-[0_4px_0_0_#000000] hover:translate-y-[2px]',
+  /** Turquoise gradient with dark navy text for strong contrast */
+  primary: 'bg-gradient-to-br from-[#00D9C6] to-[#00B3A4] text-[#0a1122] hover:from-[#2de8d7] hover:to-[#00D9C6] shadow-[0_6px_0_0_#00544c] hover:shadow-[0_4px_0_0_#00544c] hover:translate-y-[2px]',
+  onDark: 'bg-gradient-to-br from-[#00D9C6] to-[#00B3A4] text-[#0a1122] hover:from-[#2de8d7] hover:to-[#00D9C6] shadow-[0_6px_0_0_#000000] hover:shadow-[0_4px_0_0_#000000] hover:translate-y-[2px]',
   outline: 'border-2 border-current bg-transparent hover:bg-cream hover:text-ink',
   outlineOnDark: 'border-2 border-cream/70 text-cream hover:bg-cream hover:text-ink',
   navy: 'bg-navy text-[#fff7ec] hover:bg-[#26345a]',

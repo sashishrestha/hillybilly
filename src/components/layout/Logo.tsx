@@ -1,7 +1,7 @@
 import { cn } from '@/lib/cn';
 
 /** Intrinsic size of public/images/HillyBilly CornDogs-01.avif (keeps layout stable while it loads). */
-const LOGO = { src: '/images/HillyBilly%20CornDogs-01.avif', w: 744, h: 474 };
+const LOGO = { src: '/images/logo.png', w: 744, h: 474 };
 
 /**
  * HillyBilly logo. The artwork has a transparent background, so it reads on both the

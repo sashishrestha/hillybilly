@@ -135,29 +135,29 @@ export const occasions: Occasion[] = [
       en: 'Food truck catering for school fairs, campus days and graduations.',
     },
   },
-  {
-    id: 'usBase',
-    formValue: 'usBase',
-    slug: { de: 'us-base-events', en: 'us-base-events' },
-    title: { de: 'US-Base-Events', en: 'US base events' },
-    short: { de: 'Feste und Feiern auf US-Stützpunkten', en: 'Celebrations on US military bases' },
-    intro: {
-      de: 'Wir catern Veranstaltungen auf US-Stützpunkten — mit amerikanischen Klassikern und internationaler Küche.',
-      en: 'We cater events on US military bases — with American classics and international food.',
-    },
-    points: [
-      { de: 'Kommunikation auf Deutsch und Englisch', en: 'Communication in German and English' },
-      { de: 'Wir klären Zugangsvoraussetzungen vorab mit dir', en: 'We sort out access requirements with you in advance' },
-      { de: 'Amerikanische und internationale Konzepte', en: 'American and international concepts' },
-    ],
-    icon: 'flag',
-    image: 'corndogsTeamFour',
-    seoTitle: { de: 'Catering für US-Base-Events', en: 'Catering for US military base events' },
-    seoDescription: {
-      de: 'Foodtruck Catering für Veranstaltungen auf US-Stützpunkten in Deutschland.',
-      en: 'Food truck catering for events on US military bases in Germany.',
-    },
-  },
+  // {
+  //   id: 'usBase',
+  //   formValue: 'usBase',
+  //   slug: { de: 'us-base-events', en: 'us-base-events' },
+  //   title: { de: 'US-Base-Events', en: 'US base events' },
+  //   short: { de: 'Feste und Feiern auf US-Stützpunkten', en: 'Celebrations on US military bases' },
+  //   intro: {
+  //     de: 'Wir catern Veranstaltungen auf US-Stützpunkten — mit amerikanischen Klassikern und internationaler Küche.',
+  //     en: 'We cater events on US military bases — with American classics and international food.',
+  //   },
+  //   points: [
+  //     { de: 'Kommunikation auf Deutsch und Englisch', en: 'Communication in German and English' },
+  //     { de: 'Wir klären Zugangsvoraussetzungen vorab mit dir', en: 'We sort out access requirements with you in advance' },
+  //     { de: 'Amerikanische und internationale Konzepte', en: 'American and international concepts' },
+  //   ],
+  //   icon: 'flag',
+  //   image: 'corndogsTeamFour',
+  //   seoTitle: { de: 'Catering für US-Base-Events', en: 'Catering for US military base events' },
+  //   seoDescription: {
+  //     de: 'Foodtruck Catering für Veranstaltungen auf US-Stützpunkten in Deutschland.',
+  //     en: 'Food truck catering for events on US military bases in Germany.',
+  //   },
+  // },
 ];
 
 export const getOccasionById = (id: string) => occasions.find((o) => o.id === id);

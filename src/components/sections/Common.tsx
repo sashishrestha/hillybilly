@@ -276,7 +276,7 @@ export function CtaBand() {
         : t({ de: 'Tipp an, was passt. Dauert 5 Sekunden.', en: 'Tap what fits. Takes 5 seconds.' });
 
   return (
-    <section aria-labelledby="cta-heading" className="theme-dark relative overflow-hidden bg-gradient-to-br from-[#d81b77] to-[#a80d58] text-white">
+    <section aria-labelledby="cta-heading" className="theme-dark relative overflow-hidden bg-teal text-ink">
       <div aria-hidden className="halftone pointer-events-none absolute inset-0 text-white opacity-[0.1]" style={{ maskImage: 'linear-gradient(255deg, #000, transparent 60%)', WebkitMaskImage: 'linear-gradient(255deg, #000, transparent 60%)' }} />
       <div className="reveal container-x relative grid items-center gap-10 py-16 md:py-24 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
         <div>
@@ -299,7 +299,7 @@ export function CtaBand() {
               { de: 'Unverbindlich', en: 'No obligation' },
             ].map((p) => (
               <li key={p.en} className="inline-flex items-center gap-2">
-                <Tick className="size-5 text-mango" />
+                <Tick className="size-5 text-alt bg-mango rounded-full p-1" />
                 {t(p)}
               </li>
             ))}

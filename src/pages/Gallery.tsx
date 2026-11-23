@@ -6,8 +6,10 @@ import { media, type MediaKey } from '@/content/media';
 import { useT } from '@/lib/i18n';
 
 const ORDER: MediaKey[] = [
-  'corndogsTeamTruck', 'momoBoat', 'chaatBowl', 'waffleStickServer', 'corndogsTruck', 'momolayaChef',
-  'corndogInHand', 'curryTeam', 'momoTwoPlates', 'waffleSticksCounter', 'momolayaTrailer', 'mangoLassi',
+  'corndogsTeamTruck', 'burger', 'momoBoat', 'corndogBox', 'chaatBowl', 'macCheese',
+  'waffleStickServer', 'koreanBowls', 'corndogsTruck', 'momoPlate', 'momolayaChef', 'hotdog',
+  'corndogInHand', 'curryChaatSign', 'curryTeam', 'momoBeef', 'momoTwoPlates', 'waffleSticksCounter',
+  'curryTeamSelfie', 'momoVeg', 'momolayaTrailer', 'curryTeamKitchen', 'mangoLassi',
   'corndogsPotatoClassic', 'corndogsTeamFour',
 ];
 

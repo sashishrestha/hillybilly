@@ -1,0 +1,1 @@
+ param($s) $s.Replace("gallery: ['curryTeam', 'mangoLassi']","gallery: ['curryTeam', 'curryChaatSign', 'curryTeamSelfie', 'curryTeamKitchen', 'mangoLassi']") 
