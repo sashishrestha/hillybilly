@@ -157,7 +157,36 @@ export default function ConceptDetail() {
         </div>
       </section>
 
-      {c.story && (
+      {c.process && (
+        <section aria-labelledby="process-heading" className="bg-alt py-16 md:py-24">
+          <div className="container-x grid items-start gap-12 lg:grid-cols-[1fr_1.2fr]">
+            <div className="mx-auto w-full max-w-sm overflow-hidden rounded-[1.4rem] bg-[#fff7ec] p-2.5 shadow-[10px_10px_0_0_rgba(0,0,0,0.25)]">
+              <Img k={c.process.image} className="rounded-[1rem] !h-auto" />
+            </div>
+            <div>
+              <h2 id="process-heading" className="text-display-2">{t(c.process.heading)}</h2>
+              <Scribble className="mt-3" />
+              <p className="mt-4 text-lg">{t(c.process.intro)}</p>
+              <ol className="mt-8 flex flex-col gap-5">
+                {c.process.steps.map((s) => (
+                  <li key={s.title.en} className="rounded-[var(--radius-card)] border-l-[6px] bg-navy-2 p-5 text-cream ring-1 ring-cream/10" style={{ borderLeftColor: c.accent }}>
+                    <h3 className="text-2xl">{t(s.title)}</h3>
+                    <ul className="mt-2 space-y-1.5 text-mist">
+                      {s.items.map((i) => (
+                        <li key={i.name.en} className="flex gap-2">
+                          <Tick className="mt-0.5 size-5 shrink-0 text-turq" />
+                          <span><strong className="text-cream">{t(i.name)}</strong>{i.description && <> – {t(i.description)}</>}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    {s.note && <p className="mt-3 text-sm text-mist">{t(s.note)}</p>}
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </section>
+      )}      {c.story && (
         <section aria-labelledby="story-heading" className="theme-dark relative overflow-hidden bg-navy py-16 text-cream md:py-24">
           <Halftone />
           <div className="container-x relative max-w-4xl">
@@ -172,7 +201,7 @@ export default function ConceptDetail() {
         </section>
       )}
       {c.gallery.length > 0 && (
-        <section aria-labelledby="gallery-heading" className="pb-16 md:pb-24">
+        <section aria-labelledby="gallery-heading" className="py-16 md:pb-24">
           <div className="container-x">
             <h2 id="gallery-heading" className="mb-8 text-4xl md:text-5xl">{t({ de: 'Unterwegs mit', en: 'Out and about with' })} {c.name}</h2>
             <ul className="grid grid-cols-2 gap-3 md:grid-cols-4">

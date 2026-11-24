@@ -20,6 +20,7 @@ import chaatBowl from '@/assets/img/chaat-bowl.jpeg';
 
 import corndogHero from '@/assets/img/32.jpeg';
 import corndogBox from '@/assets/img/corndog.jpeg';
+import corndogProcess from '@/assets/img/corndog-process.jpg';
 import burger from '@/assets/img/burger.jpeg';
 import hotdog from '@/assets/img/hotdog.jpeg';
 import macCheese from '@/assets/img/mac & cheese.jpeg';
@@ -106,6 +107,10 @@ export const media = {
   corndogHero: {
     src: corndogHero, w: 1536, h: 2048,
     alt: { de: 'Kartoffel-Corndog und klassischer Corndog mit Ketchup und Mayo vor der Speisekarte', en: 'Potato corndog and classic corndog with ketchup and mayo in front of the menu' },
+  },
+  corndogProcess: {
+    src: corndogProcess, w: 821, h: 1853,
+    alt: { de: 'Infografik: So baust du deinen HillyBilly Corndog in drei Schritten. Inhalt, Topping und Saucen.', en: 'Infographic: build your HillyBilly corndog in three steps. Filling, topping and sauces.' },
   },
   corndogBox: {
     src: corndogBox, w: 1086, h: 1448,

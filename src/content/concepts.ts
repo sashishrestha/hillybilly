@@ -40,6 +40,8 @@ export type Concept = {
   gallery: MediaKey[];
   menuHeading?: L;
   menuFooter?: L;
+  /** Optional step-by-step guide shown next to an infographic */
+  process?: { image: MediaKey; heading: L; intro: L; steps: { title: L; items: { name: L; description?: L }[]; note?: L }[] };
   story?: { heading: L; tagline: L; paragraphs: L[]; closing: L };
   dishes: Dish[];
   formats: L[];
@@ -71,6 +73,38 @@ export const concepts: Concept[] = [
     pitch: {
       de: 'Frisch frittierte Corndogs mit saftiger Wurst oder geschmolzenem Mozzarella. Ob klassisch, mit Ramen, Kartoffeln oder Süßkartoffeln – kombiniert mit leckeren Saucen ganz nach deinem Geschmack.\n\nServiert aus unserem auffälligen pinken Foodtruck – ein echtes Highlight auf jedem Event!',
       en: 'Freshly fried corndogs with a juicy sausage or melted mozzarella. Classic, with ramen, potato or sweet potato – paired with tasty sauces to suit your taste.\n\nServed from our eye-catching pink food truck – a real highlight at any event!',
+    },
+    process: {
+      image: 'corndogProcess',
+      heading: { de: 'So wird dein Corndog', en: 'How your corndog is made' },
+      intro: { de: 'In drei Schritten zu deinem Wunsch-Corndog.', en: 'Three steps to your perfect corndog.' },
+      steps: [
+        {
+          title: { de: 'Schritt 1: Inhalt', en: 'Step 1: Filling' },
+          items: [
+            { name: { de: 'Geflügel- oder vegane Wurst', en: 'Poultry or vegan sausage' } },
+            { name: { de: 'Mozzarella-Käse', en: 'Mozzarella cheese' } },
+            { name: { de: 'Halb Mozzarella, halb Wurst', en: 'Half mozzarella, half sausage' } },
+          ],
+        },
+        {
+          title: { de: 'Schritt 2: Toppings', en: 'Step 2: Toppings' },
+          items: [
+            { name: { de: 'Original Corndog', en: 'Original Corndog' }, description: { de: 'Unsere Klassiker mit knusprigem Panko.', en: 'Our classic with crispy panko.' } },
+            { name: { de: 'Ramen Corndog', en: 'Ramen Corndog' }, description: { de: 'Chinesisch neu definiert, Ramen Style.', en: 'Chinese reinvented, ramen style.' } },
+            { name: { de: 'Pommes Corndog', en: 'Fries Corndog' }, description: { de: 'Mit stückchen goldenen Pommes.', en: 'With pieces of golden fries.' } },
+            { name: { de: 'Süßkartoffel Corndog', en: 'Sweet Potato Corndog' }, description: { de: 'Mit köstlichen Süßkartoffel-Pommes.', en: 'With delicious sweet potato fries.' } },
+          ],
+        },
+        {
+          title: { de: 'Schritt 3: Finale', en: 'Step 3: The finish' },
+          items: [
+            { name: { de: 'Mit Zucker bestreut. Einfach nur Wow!', en: 'Sprinkled with sugar. Simply wow!' } },
+            { name: { de: 'Wähle 2 Saucen: Ketchup, Mayo, Senf, Süß-Sauer-Sauce, Hot Mayo, Sriracha Sauce, BBQ, Curry Sauce', en: 'Pick 2 sauces: ketchup, mayo, mustard, sweet and sour sauce, hot mayo, sriracha sauce, BBQ, curry sauce' } },
+          ],
+          note: { de: 'Extra Saucen kosten 0,50 € zzgl.', en: 'Extra sauces cost €0.50 extra.' },
+        },
+      ],
     },
     image: 'corndogBox',
     gallery: ['corndogInHand', 'corndogsPotatoClassic', 'corndogsTruck', 'corndogsTeamTruck', 'corndogsTeamFour'],
