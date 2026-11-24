@@ -18,6 +18,7 @@ import mangoLassi from '@/assets/img/mango-lassi.webp';
 import chaatBowl from '@/assets/img/chaat-bowl.jpeg';
 
 
+import corndogHero from '@/assets/img/32.jpeg';
 import corndogBox from '@/assets/img/corndog.jpeg';
 import burger from '@/assets/img/burger.jpeg';
 import hotdog from '@/assets/img/hotdog.jpeg';
@@ -101,6 +102,10 @@ export const media = {
   chaatBowl: {
     src: chaatBowl, w: 960, h: 1280,
     alt: { de: 'Kichererbsen-Chaat mit Joghurt, Koriander und Sev vor dem Curry-on-Wheels-Schriftzug', en: 'Chickpea chaat with yoghurt, coriander and sev in front of the Curry on Wheels sign' },
+  },
+  corndogHero: {
+    src: corndogHero, w: 1536, h: 2048,
+    alt: { de: 'Kartoffel-Corndog und klassischer Corndog mit Ketchup und Mayo vor der Speisekarte', en: 'Potato corndog and classic corndog with ketchup and mayo in front of the menu' },
   },
   corndogBox: {
     src: corndogBox, w: 1086, h: 1448,

@@ -19,7 +19,7 @@ export const faq: { q: L; a: L }[] = [
     q: { de: 'Gibt es vegetarische Gerichte?', en: 'Do you have vegetarian dishes?' },
     a: {
       de: 'Ja, mehrere Konzepte haben vegetarische Gerichte, z. B. Gemüse-Momos, Daal, Pakoras und unsere Waffeln. Die Kennzeichnung steht direkt beim Gericht. Allergen-Infos schicken wir mit dem Angebot.',
-      en: 'Yes, several concepts have vegetarian dishes, such as vegetable momos, daal, pakoras and our waffles. Each dish is labelled individually. We send allergen info with your quote.',
+      en: 'Yes, several concepts have vegetarian dishes, such as vegetable momos, daal, pakoras, waffles and vegane Corndogs. Each dish is labelled individually. We send allergen info with your quote.',
     },
   },
   {

@@ -66,7 +66,7 @@ export function ConceptCard({ concept, headingLevel = 3 }: { concept: Concept; h
           <H className="text-[1.85rem]">{concept.name}</H>
           <p className="mt-2 text-mist">{t(concept.tagline)}</p>
           {hasVeg(concept) && (
-            <p className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-teal">
+            <p className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-turq">
               <LeafIcon size={16} aria-hidden />
               {t({ de: 'Vegetarische Gerichte', en: 'Vegetarian dishes' })}
             </p>

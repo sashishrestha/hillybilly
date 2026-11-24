@@ -137,11 +137,11 @@ export default function ConceptDetail() {
           <aside aria-label={t({ de: 'Service-Details', en: 'Service details' })} className="space-y-6 self-start rounded-[var(--radius-card)] bg-navy-2 p-7 ring-1 ring-cream/10 lg:sticky lg:top-28 [&>div+div]:border-t-2 [&>div+div]:border-dashed [&>div+div]:border-cream/20 [&>div+div]:pt-6 [&_h2]:font-brush [&_h2]:text-[1.7rem] [&_h2]:font-normal [&_h2]:text-pink">
             <div>
               <h2 className="text-2xl">{t({ de: 'So servieren wir', en: 'How we serve' })}</h2>
-              <ul className="mt-2 space-y-1.5 text-mist">{c.formats.map((f) => <li key={f.en} className="flex gap-2"><Tick className="mt-0.5 size-5 text-teal" />{t(f)}</li>)}</ul>
+              <ul className="mt-2 space-y-1.5 text-mist">{c.formats.map((f) => <li key={f.en} className="flex gap-2"><Tick className="mt-0.5 size-5 text-turq" />{t(f)}</li>)}</ul>
             </div>
             <div>
               <h2 className="text-2xl">{t({ de: 'Ideal für', en: 'Great for' })}</h2>
-              <ul className="mt-2 space-y-1.5 text-mist">{c.goodFor.map((f) => <li key={f.en} className="flex gap-2"><Tick className="mt-0.5 size-5 text-teal" />{t(f)}</li>)}</ul>
+              <ul className="mt-2 space-y-1.5 text-mist">{c.goodFor.map((f) => <li key={f.en} className="flex gap-2"><Tick className="mt-0.5 size-5 text-turq" />{t(f)}</li>)}</ul>
             </div>
             <div>
               <h2 className="flex items-center gap-2 text-2xl">

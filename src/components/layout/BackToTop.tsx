@@ -25,7 +25,7 @@ export function BackToTop() {
       tabIndex={show ? 0 : -1}
       aria-hidden={!show}
       className={cn(
-        'fixed bottom-24 right-4 z-30 grid size-12 place-items-center rounded-full bg-pink text-[#0a1122] shadow-[0_5px_0_0_#00544c] transition-[opacity,transform] duration-300 ease-[var(--ease-spring)] hover:-translate-y-1 active:translate-y-0.5 sm:bottom-6 sm:right-6',
+        'fixed bottom-24 right-4 z-30 grid size-12 place-items-center rounded-full bg-pink text-white shadow-[0_5px_0_0_#6e0a3a] transition-[opacity,transform] duration-300 ease-[var(--ease-spring)] hover:-translate-y-1 active:translate-y-0.5 sm:bottom-6 sm:right-6',
         show ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0',
       )}
     >

@@ -17,10 +17,11 @@ import { organizationJsonLd } from '@/lib/jsonld';
 
 /** The hero's "hand of cards": real dishes, dealt onto the table once on load. */
 const HAND: { k: MediaKey; label: string; rot: number; x: string; y: string; labelTop?: boolean }[] = [
-  { k: 'momoBoat', label: 'Momolaya', rot: -9, x: '0%', y: '6%', labelTop: true },
-  { k: 'corndogInHand', label: 'Corndogs', rot: 5, x: '33%', y: '0%' },
-  { k: 'chaatBowl', label: 'Curry on Wheels', rot: -4, x: '16%', y: '46%' },
-  { k: 'waffleStickServer', label: 'Waffles', rot: 8, x: '62%', y: '38%' },
+  { k: 'momoPlate', label: 'Momolaya', rot: -8, x: '0%', y: '6%', labelTop: true },
+  { k: 'corndogHero', label: 'Corndogs', rot: 4, x: '31%', y: '0%', labelTop: true },
+  { k: 'koreanBowls', label: 'Korean Street Food', rot: 8, x: '63%', y: '8%', labelTop: true },
+  { k: 'chaatBowl', label: 'Curry on Wheels', rot: -5, x: '7%', y: '52%' },
+  { k: 'waffleSticksCounter', label: 'Waffles', rot: 6, x: '45%', y: '50%' },
 ];
 
 function HeroHand() {
@@ -30,14 +31,14 @@ function HeroHand() {
       {HAND.map((c, i) => (
         <motion.div
           key={c.k}
-          className="absolute w-[38%]"
+          className="absolute w-[37%]"
           style={{ left: c.x, top: c.y, zIndex: i }}
           initial={reduce ? false : { opacity: 0, y: 120, rotate: 0 }}
           animate={{ opacity: 1, y: 0, rotate: c.rot }}
           transition={{ type: 'spring', stiffness: 140, damping: 18, delay: 0.25 + i * 0.12 }}
         >
           <Tilt maxTilt={8} className="block">
-            <TiltContent className="no-touch-hover relative rounded-[1.1rem] bg-cream p-2 shadow-[0_24px_50px_-20px_rgba(0,0,0,0.7)] transition-transform hover:z-10 hover:-translate-y-3">
+            <TiltContent className="no-touch-hover relative rounded-[1.1rem] bg-cream p-2 shadow-[0_24px_50px_-20px_rgba(0,0,0,0.7),6px_6px_0_0_rgba(247,37,133,0.85)] transition-transform hover:z-10 hover:-translate-y-3 hover:scale-105">
               <div className="aspect-[4/4.6] overflow-hidden rounded-[0.8rem]">
                 <Img k={c.k} priority decorative />
               </div>
@@ -90,7 +91,7 @@ function Hero() {
                 aria-hidden
                 viewBox="0 0 300 14"
                 preserveAspectRatio="none"
-                className="absolute -bottom-2 left-0 h-2.5 w-full text-mango"
+                className="absolute -bottom-2 left-0 h-2.5 w-full text-turq"
               >
                 <path
                   d="M3 9 C 40 3, 70 12, 110 7 S 190 3, 225 8 S 275 11, 297 5"
@@ -121,7 +122,7 @@ function Hero() {
                 </Link>
               </Button>
             </AnimateIcon>
-            <Button asChild variant="outlineOnDark" size="lg">
+            <Button asChild variant="outlineTurq" size="lg">
               <Link to={pathFor('concepts', lang)}>{t({ de: 'Foodkonzepte entdecken', en: 'Explore our food concepts' })}</Link>
             </Button>
           </div>
@@ -133,7 +134,7 @@ function Hero() {
           >
             <svg aria-hidden viewBox="0 0 48 32" className="h-7 w-10 shrink-0 -rotate-6" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
               <path d="M4 22 C 12 6, 28 4, 40 14" />
-              <path d="M30 6 L41 14 L31 22" />
+              <path d="M38 3 L40 14 L29 14" />
             </svg>
             <span className="-rotate-1">{t({ de: 'Alles frisch gekocht, direkt vor deinen Gästen!', en: 'Everything cooked fresh, right in front of your guests!' })}</span>
           </p>

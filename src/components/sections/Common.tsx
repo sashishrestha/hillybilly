@@ -171,7 +171,7 @@ export function HowItWorks() {
         <SectionHead id="how-heading" kicker={t({ de: 'In 3 Schritten', en: '3 easy steps' })} title={t({ de: 'So einfach geht’s', en: 'How it works' })} />
         <ol className="reveal-group grid gap-6 md:grid-cols-3">
           {steps.map((s, i) => (
-            <li key={i} className="group relative rounded-[var(--radius-card)] bg-navy-2 p-7 pt-9 ring-1 ring-cream/10 transition-[translate,box-shadow] duration-300 hover:-translate-y-1.5 hover:ring-pink">
+            <li key={i} className="group relative rounded-[var(--radius-card)] bg-navy-2 p-7 pt-9 ring-1 ring-cream/10 transition-[translate,box-shadow] duration-300 hover:-translate-y-1.5 hover:ring-turq">
               <span aria-hidden className="absolute -top-5 left-6 grid size-12 -rotate-6 place-items-center rounded-xl bg-mango font-brush text-3xl leading-none text-navy shadow-[3px_3px_0_0_rgba(0,0,0,0.35)] transition-transform duration-300 ease-[var(--ease-spring)] group-hover:rotate-3 group-hover:scale-110">
                 {i + 1}
               </span>
@@ -276,7 +276,7 @@ export function CtaBand() {
         : t({ de: 'Tipp an, was passt. Dauert 5 Sekunden.', en: 'Tap what fits. Takes 5 seconds.' });
 
   return (
-    <section aria-labelledby="cta-heading" className="theme-dark relative overflow-hidden bg-teal text-ink">
+    <section aria-labelledby="cta-heading" className="theme-dark relative overflow-hidden bg-gradient-to-br from-[#d81b77] to-[#a80d58] text-white">
       <div aria-hidden className="halftone pointer-events-none absolute inset-0 text-white opacity-[0.1]" style={{ maskImage: 'linear-gradient(255deg, #000, transparent 60%)', WebkitMaskImage: 'linear-gradient(255deg, #000, transparent 60%)' }} />
       <div className="reveal container-x relative grid items-center gap-10 py-16 md:py-24 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
         <div>
@@ -299,7 +299,7 @@ export function CtaBand() {
               { de: 'Unverbindlich', en: 'No obligation' },
             ].map((p) => (
               <li key={p.en} className="inline-flex items-center gap-2">
-                <Tick className="size-5 text-alt bg-mango rounded-full p-1" />
+                <Tick className="size-5 text-mango" />
                 {t(p)}
               </li>
             ))}
@@ -313,7 +313,7 @@ export function CtaBand() {
         </div>
 
         {/* Quick start card */}
-        <div className="relative rotate-1 rounded-[1.6rem] bg-navy p-6 text-cream shadow-[10px_10px_0_0_rgba(16,27,51,0.55)] transition-transform duration-500 hover:rotate-0 md:p-8">
+        <div className="relative rotate-1 rounded-[1.6rem] border-b-[6px] border-[#00D9C6] bg-navy p-6 text-cream shadow-[10px_10px_0_0_rgba(16,27,51,0.55)] transition-transform duration-500 hover:rotate-0 md:p-8">
           <span aria-hidden className="tape absolute -top-4 right-6 rotate-3 text-lg">{t({ de: 'Schnellstart', en: 'Quick start' })}</span>
 
           <fieldset>

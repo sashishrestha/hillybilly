@@ -75,10 +75,10 @@ export const concepts: Concept[] = [
     image: 'corndogBox',
     gallery: ['corndogInHand', 'corndogsPotatoClassic', 'corndogsTruck', 'corndogsTeamTruck', 'corndogsTeamFour'],
     dishes: [
-      { name: { de: 'Classic Corndog', en: 'Classic corndog' }, description: { de: 'Würstchen im Teigmantel mit Panko-Kruste, Ketchup und Mayo.', en: 'Sausage in batter with a panko crust, ketchup and mayo.' } },
-      { name: { de: 'Potato Corndog', en: 'Potato corndog' }, description: { de: 'Mit Kartoffelwürfeln ummantelt, extra knusprig.', en: 'Coated in diced potato for extra crunch.' } },
-      { name: { de: 'Gitter-Pommes', en: 'Waffle fries' }, description: { de: 'Die perfekte Beilage zum Teilen.', en: 'The perfect side to share.' } },
-      { name: { de: 'Mexican Nachos', en: 'Mexican nachos' }, description: { de: 'Mit Salsa oder Guacamole.', en: 'With salsa or guacamole.' } },
+      { name: { de: 'Original Corndog', en: 'Original Corndog' }, description: { de: 'Unser Klassiker mit knusprigem Panko.', en: 'Our classic with crispy panko.' } },
+      { name: { de: 'Ramen Corndog', en: 'Ramen Corndog' }, description: { de: 'Knusprige Ramen-Nudeln im asiatischen Style.', en: 'Crispy ramen noodles, Asian style.' } },
+      { name: { de: 'Pommes Corndog', en: 'Fries Corndog' }, description: { de: 'Mit goldenen, knusprigen Kartoffelwürfeln.', en: 'With golden, crispy diced potato.' } },
+      { name: { de: 'Süßkartoffel Corndog', en: 'Sweet Potato Corndog' }, description: { de: 'Mit leckeren Süßkartoffel-Pommes.', en: 'With tasty sweet potato fries.' } },
     ],
     formats: [
       { de: 'Foodtruck vor Ort', en: 'Food truck on site' },

@@ -19,7 +19,7 @@ export function FaqAccordion({ items }: { items: QA[]; tone?: 'light' | 'dark' }
           value={`q${i}`}
           className={cn(
             'group/item overflow-hidden rounded-[var(--radius-card)] bg-navy-2 ring-1 ring-cream/10 transition-[box-shadow,background-color] duration-300',
-            'hover:ring-cream/30 data-[state=open]:ring-2 data-[state=open]:ring-pink',
+            'hover:ring-cream/30 data-[state=open]:ring-2 data-[state=open]:ring-turq',
           )}
         >
           <Header className="flex">

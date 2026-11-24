@@ -17,7 +17,7 @@ export function DietTag({ diet }: { diet: Diet }) {
     <span
       className={
         'inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-sm font-semibold ' +
-        (spicy ? 'bg-pink/15 text-pink' : 'bg-teal/15 text-teal')
+        (spicy ? 'bg-pink/15 text-pink' : 'bg-turq/15 text-turq')
       }
     >
       {spicy ? <FlameIcon size={14} aria-hidden /> : <LeafIcon size={14} aria-hidden />}
