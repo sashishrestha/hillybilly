@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import { AnimateIcon } from '@animate-ui/react/icons';
 import { ArrowRightIcon, MailIcon, MessageCircleIcon, PhoneIcon, SparklesIcon, UsersIcon } from '@/components/animate-ui/icons';
 import { Seo } from '@/components/layout/Seo';
@@ -45,7 +45,7 @@ export default function Contact() {
             {channels.map(({ icon: Icon, label, value, href }, i) => (
               <li key={label}>
                 <AnimateIcon animateOnHover asChild>
-                  <a href={href} rel="noopener" className="group flex h-full flex-col gap-4 rounded-[var(--radius-card)] bg-navy-2 p-7 ring-1 ring-cream/10 transition-[box-shadow,translate] duration-300 hover:-translate-y-1.5 hover:ring-pink">
+                  <a href={href} {...(href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})} className="group flex h-full flex-col gap-4 rounded-[var(--radius-card)] bg-navy-2 p-7 ring-1 ring-cream/10 transition-[box-shadow,translate] duration-300 hover:-translate-y-1.5 hover:ring-pink">
                     <span className={`grid size-14 place-items-center rounded-2xl bg-mango text-navy shadow-[3px_3px_0_0_rgba(0,0,0,0.35)] transition-transform duration-300 ease-[var(--ease-spring)] group-hover:rotate-0 group-hover:scale-110 ${i % 2 ? 'rotate-3' : '-rotate-3'}`}>
                       <Icon size={28} aria-hidden />
                     </span>

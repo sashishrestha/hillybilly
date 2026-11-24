@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+﻿import { Link, useParams } from 'react-router-dom';
 import { AnimateIcon } from '@animate-ui/react/icons';
 import { ArrowRightIcon, CameraIcon, InfoIcon, PlugZapIcon } from '@/components/animate-ui/icons';
 import { Seo } from '@/components/layout/Seo';
@@ -75,7 +75,7 @@ export default function ConceptDetail() {
               </AnimateIcon>
               {c.instagram && (
                 <Button asChild variant="outlineOnDark" size="lg">
-                  <a href={c.instagram} rel="noopener">
+                  <a href={c.instagram} target="_blank" rel="noopener noreferrer">
                     <CameraIcon size={20} aria-hidden /> Instagram
                   </a>
                 </Button>

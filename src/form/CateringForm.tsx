@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+﻿import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import { Root as Progress, ProgressIndicator } from '@animate-ui/react/primitives/radix-ui/progress';
@@ -578,7 +578,7 @@ export function CateringForm() {
             </Check>
           </div>
           <Button asChild variant="navy" className="mt-5">
-            <a href={waHref} rel="noopener" target="_blank">
+            <a href={waHref} target="_blank" rel="noopener noreferrer">
               <MessageCircleIcon size={20} aria-hidden /> {t({ de: 'WhatsApp öffnen', en: 'Open WhatsApp' })}
             </a>
           </Button>

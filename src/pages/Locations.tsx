@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import { CameraIcon, MapPinIcon } from '@/components/animate-ui/icons';
 import { Seo } from '@/components/layout/Seo';
 import { Button } from '@/components/ui/Button';
@@ -59,7 +59,7 @@ export default function Locations() {
                         <MapPinIcon size={16} aria-hidden /> {t(d.place)}, {d.city}{d.time ? ` · ${d.time}` : ''}
                       </p>
                     </div>
-                    {d.mapUrl && <a href={d.mapUrl} rel="noopener" className="font-bold underline underline-offset-4">{t({ de: 'Route', en: 'Directions' })}</a>}
+                    {d.mapUrl && <a href={d.mapUrl} target="_blank" rel="noopener noreferrer" className="font-bold underline underline-offset-4">{t({ de: 'Route', en: 'Directions' })}</a>}
                   </li>
                 );
               })}
@@ -76,13 +76,13 @@ export default function Locations() {
               <ul className="mt-6 flex flex-wrap gap-3">
                 <li>
                   <Button asChild variant="navy" size="sm">
-                    <a href={site.social.instagram} rel="noopener"><CameraIcon size={18} aria-hidden /> HillyBilly Corndogs</a>
+                    <a href={site.social.instagram} target="_blank" rel="noopener noreferrer"><CameraIcon size={18} aria-hidden /> HillyBilly Corndogs</a>
                   </Button>
                 </li>
                 {instagrams.filter((c) => c.instagram !== site.social.instagram).map((c) => (
                   <li key={c.slug}>
                     <Button asChild variant="outline" size="sm">
-                      <a href={c.instagram} rel="noopener"><CameraIcon size={18} aria-hidden /> {c.name}</a>
+                      <a href={c.instagram} target="_blank" rel="noopener noreferrer"><CameraIcon size={18} aria-hidden /> {c.name}</a>
                     </Button>
                   </li>
                 ))}

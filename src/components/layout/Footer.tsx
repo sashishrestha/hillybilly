@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
 import { visibleConcepts } from '@/content/concepts';
 import { occasions } from '@/content/occasions';
@@ -34,7 +34,7 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href={`https://wa.me/${site.whatsapp}`} className={`${linkCls} inline-flex items-center gap-2`} rel="noopener">
+              <a href={`https://wa.me/${site.whatsapp}`} className={`${linkCls} inline-flex items-center gap-2`} target="_blank" rel="noopener noreferrer">
                 <MessageCircleIcon size={18} aria-hidden /> WhatsApp
               </a>
             </li>
@@ -44,7 +44,7 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href={site.social.instagram} className={`${linkCls} inline-flex items-center gap-2`} rel="noopener">
+              <a href={site.social.instagram} className={`${linkCls} inline-flex items-center gap-2`} target="_blank" rel="noopener noreferrer">
                 <CameraIcon size={18} aria-hidden /> Instagram
               </a>
             </li>

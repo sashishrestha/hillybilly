@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react';
+﻿import { useState, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { AnimateIcon } from '@animate-ui/react/icons';
 import {
@@ -211,7 +211,7 @@ export function FaqSection({ tone = 'light' }: { tone?: 'light' | 'dark' }) {
           <div className="mt-6 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
             <AnimateIcon animateOnHover asChild>
               <Button asChild variant="outline" size="md">
-                <a href={`https://wa.me/${site.whatsapp}`} rel="noopener">
+                <a href={`https://wa.me/${site.whatsapp}`} target="_blank" rel="noopener noreferrer">
                   <MessageCircleIcon size={20} aria-hidden /> WhatsApp
                 </a>
               </Button>
@@ -375,7 +375,7 @@ export function CtaBand() {
             </AnimateIcon>
             <AnimateIcon animateOnHover asChild>
               <Button asChild variant="outlineOnDark" size="lg">
-                <a href={`https://wa.me/${site.whatsapp}`} rel="noopener">
+                <a href={`https://wa.me/${site.whatsapp}`} target="_blank" rel="noopener noreferrer">
                   <MessageCircleIcon size={20} aria-hidden /> WhatsApp
                 </a>
               </Button>
