@@ -1,6 +1,6 @@
 ﻿import { Link, useParams } from 'react-router-dom';
 import { AnimateIcon } from '@animate-ui/react/icons';
-import { ArrowRightIcon, CameraIcon, InfoIcon, PlugZapIcon } from '@/components/animate-ui/icons';
+import { ArrowRightIcon, CameraIcon, PlugZapIcon } from '@/components/animate-ui/icons';
 import { Seo } from '@/components/layout/Seo';
 import { Button } from '@/components/ui/Button';
 import { Img } from '@/components/ui/Img';
@@ -109,15 +109,6 @@ export default function ConceptDetail() {
             <p className="tape mb-4 -rotate-2 text-xl">{t({ de: 'Speisekarte', en: 'The menu' })}</p>
             <h2 id="menu-heading" className="text-display-2">{t(c.menuHeading ?? { de: 'Menü-Highlights', en: 'Menu highlights' })}</h2>
             <Scribble className="mt-3" />
-            {c.status === 'new' && (
-              <p className="mt-4 flex gap-2 rounded-2xl bg-mango/20 p-4 text-cream">
-                <InfoIcon size={20} className="mt-0.5 shrink-0" aria-hidden />
-                {t({
-                  de: 'Dieses Konzept ist neu. Das genaue Menü stimmen wir mit deinem Angebot ab.',
-                  en: 'This concept is new. We confirm the exact menu with your quote.',
-                })}
-              </p>
-            )}
             <ul className="reveal-group mt-8 flex flex-col gap-3">
               {c.dishes.map((d) => (
                 <li key={d.name.en} className="flex flex-col gap-2 rounded-[var(--radius-card)] border-l-[6px] bg-navy-2 p-5 ring-1 ring-cream/10 transition-[translate,box-shadow] duration-300 hover:-translate-y-0.5 hover:ring-cream/30 sm:flex-row sm:items-center sm:justify-between sm:gap-6" style={{ borderLeftColor: c.accent }}>
